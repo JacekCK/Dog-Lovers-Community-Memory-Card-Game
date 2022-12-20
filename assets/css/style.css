@@ -56,7 +56,7 @@ h3 {
     background-color: #000000;
 }
 
-.board {
+.grid {
     display:flex;
     flex-wrap: wrap;
     height:300px;
