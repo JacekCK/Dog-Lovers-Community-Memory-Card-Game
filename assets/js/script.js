@@ -1,3 +1,17 @@
+// must write name before page loaded
+
+let username;
+
+function requiredInput() {
+    do {
+        username = prompt("Welcome to Dog Lovers Memory Game \n\nTo proceed please enter your Name: ");
+    }
+    while (username.length < 2);
+    document.getElementById("myinput").value = username;
+
+};
+requiredInput();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // card options
@@ -53,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
 const grid = document.querySelector('.grid')
-
+var cardsChosen = []
+var cardsChosenId = []
 // create game board 
 
 function createBoard() {
@@ -61,10 +76,24 @@ function createBoard() {
         var card = document.createElement('img')
         card.setAttribute('src', 'assets/images/blank.png')
         card.setAttribute('data-id', i)
-        // card.addEventListener('click', flipCard)
+        card.addEventListener('click', flipCard)
         grid.appendChild(card)
     }
 }
+
+// check for match 
+
+// flip your card 
+function flipCard() {
+    var cardId = this.getAttribute('data-id')
+    cardsChosen.push(cardArray[cardId].name)
+    cardsChosenId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+    if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch)
+    }
+}
+
 
 createBoard()
 
