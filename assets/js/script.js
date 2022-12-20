@@ -72,6 +72,7 @@ const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('#result')
 var cardsChosen = []
 var cardsChosenId = []
+var cardsWon = []
 // create game board 
 
 function createBoard() {
