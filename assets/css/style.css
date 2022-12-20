@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: radial-gradient(circle at 50.4% 50.5%, rgb(193, 190, 239) 10%, rgb(27, 13, 216)90%);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: inherit;
@@ -54,4 +54,11 @@ h3 {
     color: whitesmoke;
     text-transform: uppercase;
     background-color: #000000;
+}
+
+.board {
+    display:flex;
+    flex-wrap: wrap;
+    height:300px;
+    width:400px;
 }
