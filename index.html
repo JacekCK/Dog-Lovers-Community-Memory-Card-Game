@@ -10,9 +10,7 @@
 
     <!-- font awesome and google fonts-->
     <script src="https://kit.fontawesome.com/e0161d6850.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dog Lovers Memory Card Game</title>
 </head>
@@ -20,13 +18,13 @@
 <body>
     
     <!-- page title -->
-    <h1 class="heading">
-        <img id="logo" src="assets/images/favicon-32x32.png" alt="logo"> Dog Lovers</h1>
-        
-    <h2>Dog Lovers - Memory Card Game</h2>
-    <input id="myinput"/>
+    <h1> Dog Lovers Community</h1>
     
-<h3>Score:<span id="result"></span></h3>
+    <h2>Dog Lovers - Memory Card Game</h2>
+    
+    <h3><label id="name" for="myinput">Name:</label><input id="myinput"/><input id='reset' type="button" value="restart game"></h3> 
+    
+
 
     <!-- card game section-->
     <div class="grid">
@@ -35,6 +33,8 @@
    
 
     <!-- footer incl. copyright, links -->
+    <div class="result">Player Score :      <span id="result"></span></div>
+    <span id="timer"> <i class="fa-solid fa-stopwatch"></i> 00:00</span>
     <footer><i class="fa-regular fa-copyright"></i> Dog Lovers Memory Card Game by Code Institute</footer>
     <script src="assets/js/script.js"></script>
     

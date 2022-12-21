@@ -4,13 +4,19 @@ let username;
 
 function requiredInput() {
     do {
-        username = prompt("Welcome to Dog Lovers Memory Game \n\nTo proceed please enter your Name: ");
+        username = prompt("🐶 Welcome to Dog Lovers Memory Game 🐶 \n\n🃏 The goal of this game is to find two matching cards 🃏 \n\n👑 Scores six pairs to win!! 👑 \n\nTo proceed please enter your Name: ");
     }
     while (username.length < 2);
     document.getElementById("myinput").value = username;
 
 };
 requiredInput();
+
+const btn = document.querySelector('#reset')
+
+btn.addEventListener('click', function() {
+    location.reload();
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -66,10 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-cardArray.sort(() => 0.5 - Math.random())
+    cardArray.sort(() => Math.random() - 0.5);
 
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('#result')
+
 var cardsChosen = []
 var cardsChosenId = []
 var cardsWon = []
@@ -79,6 +86,7 @@ function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         var card = document.createElement('img')
         card.setAttribute('src', 'assets/images/blank.png')
+        card.setAttribute('alt', 'img')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         grid.appendChild(card)
@@ -88,12 +96,12 @@ function createBoard() {
 // check for match 
 function checkForMatch() {
     var cards = document.querySelectorAll('img')
-    const optionOneId = cardsChosenId[0]
-    const optionTwoId = cardsChosenId[1]
-    if (cardsChosen[0] === cardsChosen[1]) {
+    const optionOneId = parseInt(cardsChosenId[0])
+    const optionTwoId = parseInt(cardsChosenId[1])
+    if (cardsChosen[0] === cardsChosen[1] && optionOneId !== optionTwoId){
         alert('You found a match')
-        cards[optionOneId].setAttribute('src', 'assets/images/white.png')
-        cards[optionTwoId].setAttribute('src', 'assets/images/white.png')
+        cards[optionOneId].style.visibility = 'visible'
+        cards[optionTwoId].style.visibility = 'visible'
         cardsWon.push(cardsChosen)
     } else {
         cards[optionOneId].setAttribute('src', 'assets/images/blank.png')
@@ -104,8 +112,9 @@ function checkForMatch() {
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent = 'Congratulations You found them all!'
+    resultDisplay = alert('Congratulations You found them all!')
     }
+
 }
 
 
@@ -116,7 +125,7 @@ function flipCard() {
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
     if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch)
+        setTimeout(checkForMatch, 500)
     }
 }
 
