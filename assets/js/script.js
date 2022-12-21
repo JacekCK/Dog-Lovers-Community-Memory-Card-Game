@@ -112,7 +112,7 @@ function checkForMatch() {
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if (cardsWon.length === cardArray.length/2) {
-    resultDisplay = alert('Congratulations You found them all!')
+    resultDisplay = alert('Congratulations You found them all!! \n\n Restart game to play again!!')
     }
 
 }

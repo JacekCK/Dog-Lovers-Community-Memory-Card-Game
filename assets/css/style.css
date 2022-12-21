@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: radial-gradient(circle at 50.4% 50.5%, rgb(193, 190, 239) 10%, rgb(27, 13, 216)90%);
+    background: radial-gradient(circle at 50.4% 50.5%, rgb(217, 215, 242) 10%, rgb(27, 13, 216)90%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: inherit;
@@ -28,6 +28,7 @@ body {
 h1 {
     font-family: Open-sans, serif;
     font-weight: bolder;
+    color: whitesmoke;
     text-transform: uppercase;
     font-size: 2.2rem;
     margin: 25px auto;
@@ -35,9 +36,10 @@ h1 {
 }
 
 h2 {
-    font-family: Roboto, sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: bolder;
+    color: whitesmoke;
     margin: 0.5rem auto;
     padding: 0;
 }
@@ -50,23 +52,30 @@ h3 {
 
 }
 
-#name {
-    font-family: Lato, sans-serif;
-    text-align: center;
-    font-size: 15px;
+footer {
     color: whitesmoke;
-    background-color: #000000;
-    margin: 15px 0px 30px 0px;
-    padding: 4px 4px 4px 4px;
+    font-family: Lato, sans-serif;
 }
+
+#name {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: whitesmoke;
+    margin: 0 auto;
+    padding: 3px 20px 5px 20px;
+}
+
 #myinput {
     font-family: Roboto, sans-serif;
     text-align: center;
     color: whitesmoke;
-    text-transform: uppercase;
     background-color: #000000;
-    margin: 15px 0px 30px 0px;
-    padding: 4px 4px 4px 4px;
+    text-transform: uppercase;
+    margin: 20px 60px 40px 10px;
+    padding: 4px 4px 4px 4px
 }
 
 #reset {
@@ -76,7 +85,7 @@ h3 {
     text-transform: uppercase;
     background-color: #000000;
     padding: 4px 4px 4px 4px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -50px;
 }
 
 .result {
@@ -101,11 +110,48 @@ h3 {
     padding: 0;
     margin: -25px 0px 60px -185px;
     font-size: x-large;
+    color: whitesmoke;
 }
 
 .grid {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    height:300px;
-    width:400px;
+    height: 300px;
+    width: 400px;
+}
+
+/*Screen-sizes up to 400px */
+@media screen and (max-width:400px) {
+
+    h1 {
+        font-size: 1.4rem;
+        margin: 24px auto;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 300px;
+    }
+
+    .result {
+        margin-top: 225px;
+        font-size: small;
+        font-family: Lato, sans-serif;
+    }
+#myinput, #name, #reset {
+    font-size: 10px;
+    font-family: Lato, sans-serif;
+}
+
+
+    footer {
+        font-size: small;
+        margin: -50px 0px 10px 0px;
+    }
 }
