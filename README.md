@@ -1,108 +1,59 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+#  Dog Lovers Community  ReadMe ![Dog Lovers Community](/favicon.ico) ReadMe
+## Dog Lovers Community Memory Card Game
+Dog Lovers Memory Card Game is designed for all ages. The goal of the game is to have found all the matching cards. Each move includes 2 cards being clicked on to find the according match to the first card. If you find all pairs You Win. How quick u can be?
 
-Welcome JacekCK,
+# [Am I Responsive](https://ui.dev/amiresponsive)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+check out here ==> [Am I responsive](/readme_images/responsive-am-I.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## [UserExperience]
 
-## Gitpod Reminders
+The Dog Lovers Memory Card Game is create for pleasure and fun, a game for young and old.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### [UserStories]
 
-`python3 -m http.server`
+* First-time visitors:
+    * will be able to insert their username before the game starts.
+    * should find out what the rules of the game are.
+    * should be able to win/loose the game.
+    * should be able to restart the game as many times as desired.
+* Returning visitors:
+    * should be able to win/loose the game.
+    * should be able to restart the game as many times as desired.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## [Design]
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Colors and images has been picked from my first project portfolio [Dog Lovers Community](https://jacekck.github.io/Dogs-Lovers-Community/);
 
-A blue button should appear to click: _Make Public_,
+* position in styles has been taken from Math Love project portfolio;
 
-Another blue button should appear to click: _Open Browser_.
+* I have imported the follwoing fonts from Google Fonts:
+   - Lato 
+   - Roboto 
+   - Open-Sans
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* i have use font awesome kit; 
 
-To log into the Heroku toolbelt CLI:
+## [Features]
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### [General]
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The website is a one-page page containing:
+* a prompt() when loading the page for the user to input their name
+* the main heading on the top 
+* the grid-board in the middle of the page
+* the footer at the bottom
+* an alert() with a message if the game was won or lost and containing the stored username
 
-------
+#### prompt()
 
-## Release History
+check out here ==> [prompt() user input](/readme_images/prompt().png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+When loading the page, user is required to insert a username to be able to play the game, which is then stored for later use. The user can also find a quick explanation what the goal of the game is.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Top of Page
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+check out here ==> [Top of page](readme-images/top.page.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+At the top of the page you can find the title of the memory card game, which has been designed in the actual font Stranger Things are using and is placed at the top center of the page. Below you can find the player's moves count, which deductes 1 at a time if the player doesn't find two matching cards and finishes at 0, at which point the game will be over.
