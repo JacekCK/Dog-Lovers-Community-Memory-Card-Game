@@ -37,7 +37,7 @@ h1 {
 
 h2 {
     font-family: Lato, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     color: black;
     margin: 0.5rem auto;
@@ -54,6 +54,7 @@ h3 {
 
 footer {
     color: black;
+    font-size: large;
     font-family: Lato, sans-serif;
 }
 
@@ -90,10 +91,11 @@ footer {
 
 .result {
     text-align: center;
+    font-size: small;
     color: whitesmoke;
     text-transform: uppercase;
     background-color: #000000;
-    margin: 50px -125px 0px 0px;
+    margin: 50px 0 80px 0px;
     padding: 2px 20px 2px 20px;
 }
 
@@ -102,15 +104,6 @@ footer {
     color: whitesmoke;
     text-transform: uppercase;
     background-color: #000000;
-}
-
-
-
-#timer {
-    padding: 0;
-    margin: -25px 0px 60px -185px;
-    font-size: x-large;
-    color: black;
 }
 
 .grid {
@@ -143,20 +136,18 @@ footer {
 
     .result {
         margin-top: 225px;
-        font-size: small;
+        font-size: 9px;
         font-family: Lato, sans-serif;
+        padding: 5px;
     }
 #myinput, #name, #reset {
     font-size: 10px;
     font-family: Lato, sans-serif;
 }
-#timer {
-    color: whitesmoke;
-}
 
     footer {
         font-size: small;
-        margin: -50px 0px 10px 0px;
+        margin: -30px 0px 10px 0px;
         color: whitesmoke;
     }
 }
